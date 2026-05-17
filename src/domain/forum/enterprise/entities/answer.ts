@@ -1,6 +1,6 @@
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { AnswerAttachmentList } from './answer-attachment-list'
-import { AggregatedRoot } from '@/core/entities/aggregate-root'
+import { AggregateRoot } from '@/core/entities/aggregate-root'
 import { Optional } from '@/core/types/optional'
 
 export interface AnswerProps {
@@ -12,7 +12,7 @@ export interface AnswerProps {
   updatedAt?: Date
 }
 
-export class Answer extends AggregatedRoot<AnswerProps> {
+export class Answer extends AggregateRoot<AnswerProps> {
   get authorId() {
     return this.props.authorId
   }
